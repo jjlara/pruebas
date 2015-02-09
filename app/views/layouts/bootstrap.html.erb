@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">	
+  <title>Cursorails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+  
+  <%= csrf_meta_tags %>
+
+</head>
+
+<body>
+  <% @peticiones %>
+  <!-- Contenedor -->
+  <div class="container">
+    <!-- nenu navegacion -->
+    
+  <ul class="nav nav-pills nav-justified">
+
+    <li class="active">
+      <%= enlace "Inicio", "index" %>
+    </li>
+  <li>
+    <%=  enlace "Localizacion", "localizacion" %>
+  </li>
+  <li><%= enlace "Servicios", "servicios" %></li>
+  <li><%= enlace "Quines Somos","quienes_somos" %></li>
+  <li><%= enlace "Contacto", "contacto" %></li> 
+ 
+  
+  </ul>
+  <!-- fin de menu navegacion -->
+     
+
+<!-- intro -->
+ <div class"row">
+  <div class="jumbotron">
+  <h1>Curso Ruby on rails</h1>
+  <p>Como aprender Ruby on rails de forma facil y amena.</p>
+  <p></p>
+  <%= button_to "Entrar", {:action=>"servicios"},
+  :class=>"btn btn-primary btn-lg" %>
+</div>
+</div>
+<!-- fin intro -->
+
+<!-- comienzo columnas servicios destacados-->
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img data-src="holder.js/300x300" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img data-src="holder.js/300x300" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img data-src="holder.js/300x300" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- fin servicios destacados -->
+
+
+
+  <!-- Fin de Contenedor -->
+</div>
+
+
+ <div class="row">
+  <% if flash[:noticia] %>
+  <div class="alert alert-success" role="alert">
+    <%= flash[:noticia] %>
+  </div>
+</div>
+<% end %>
+
+
+
+</body>
+
+</html>

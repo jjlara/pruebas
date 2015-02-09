@@ -1,0 +1,30 @@
+<h1><%= @titulo %></h1>
+<h1>Anadir</h1>
+<%=  form_tag("/home/contacto") do %>
+     <%=  label_tag "Nombre" %>
+     <%=  text_field_tag :nombre %>
+     <%=  submit_tag "Enviar" %>
+<% end %>
+
+<h1>Buscar</h1>
+<%=  form_tag("/home/contacto", :method=>:get) do %>
+     <%=  label_tag "Nombre" %>
+     <%=  text_field_tag :nombre %>
+     <%=  submit_tag "Enviar" %>
+<% end %>
+
+
+
+
+<h1>Seleccion archivos</h1>
+<%=  form_tag("/home/quienes_somos", :multipart=>:true) do %>
+     <%=  label_tag "Nombre" %>
+     <%=  file_field_tag "archivo" %>
+     <%=  submit_tag "Enviar", :class => 'btn btn-primary' %>
+<% end %>
+<h1>Selectores</h1>
+<%=  form_tag("/home/contacto", :method=>:get) do %>
+     <%=  select_tag "color","<option>Rojo</option><option>Amarillo</option><option>Azul</option><option>Negro</option>".html_safe, :prompt=>"Select" %>
+     <%=  "<b>Hola</b>".html_safe %>
+     <%=  submit_tag "Enviar" %>
+<% end %>
